@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+   <f:metadata>
+
+      <f:event type="preRenderView" listener="#{studentController.loadStudents()}"/>
+
+   </f:metadata>
+
+
+   <h:head>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+      <h:outputStylesheet name="css/styles.css" />
+      <h:outputStylesheet name="primeicons/primeicons.css" library="primefaces" />
+
+      <title>Student List</title>
+
+   </h:head>
+
+   <h:body>
+
+      <h2 class="main-title">Student List</h2>
+
+      <h:messages/>
+
+      <p:button outcome="add-student" value="Add Student" icon="pi pi-plus" styleClass="add-button">
+         <f:param name="productId" value="10" />
+      </p:button>
+
+      <p:dataTable value="#{studentController.students}"
+                   var="x">
+
+         <p:column headerText="First name">
+            <h:outputText value="#{x.firstName}" />
+         </p:column>
+
+         <p:column headerText="Last name">
+            <h:outputText value="#{x.lastName}" />
+         </p:column>
+
+         <p:column headerText="E-mail">
+            <h:outputText value="#{x.email}" />
+         </p:column>
+
+         <p:column headerText="Actions" styleClass="center-buttons">
+
+            <h:form>
+
+               <p:commandButton action="#{studentController.loadStudent(x.id)}"
+                                icon="pi pi-user-minus"
+                                styleClass="edit-button"
+                                title="Icon Only" />
+
+               <p:commandButton action="#{studentController.deleteStudent(x.id)}"
+                                onclick="if (!confirm('Confirm deletion?')) return false"
+                                icon="pi pi-user-minus"
+                                styleClass="delete-button"
+                                title="Icon Only" />
+
+            </h:form>
+
+         </p:column>
+
+      </p:dataTable>
+
+
+
+
+   </h:body>
+
+</html>

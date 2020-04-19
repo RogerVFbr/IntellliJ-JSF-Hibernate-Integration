@@ -1,0 +1,68 @@
+.error {
+    color:red;
+}
+
+.main-title {
+    background: rgb(176,176,176);
+    background: linear-gradient(0deg, rgba(176,176,176,1) 0%, rgba(240,240,240,1) 100%);
+    border: solid 1px rgba(0,0,0,0.1);
+    color: rgba(0,0,0,0.65);
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.8);
+    border-radius: 3px;
+    font-family: "Open Sans", Tahoma, Verdana, Segoe, sans-serif;
+    padding: 20px;
+    size: 24em;
+    margin-bottom: 16px !important;
+}
+
+.add-button {
+    background-color: teal;
+    color: white;
+    font-weight: normal;
+    margin-bottom: 16px;
+}
+
+.edit-button {
+    background-color: #B2AC33 !important;
+    color: white;
+    font-weight: normal;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+.center-buttons{
+    text-align: center;
+}
+
+.delete-button {
+    background-color: #B23333 !important;
+    color: white;
+    font-weight: normal;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+
+.demo-table {
+    border-collapse: collapse;
+    border-bottom: 1px solid gray;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+
+.demo-table-header {
+    border-bottom: 1px solid gray;
+    background: none repeat scroll 0 0 #66CCFF;
+    padding: 10px;
+}
+
+.demo-table-odd-row {
+    border-top: 1px solid gray;
+    background: none repeat scroll 0 0 #FFFFFF;
+    text-align: center;
+}
+
+.demo-table-even-row {
+    border-top: 1px solid gray;
+    background: none repeat scroll 0 0 #F9F9F9;
+    text-align: center;
+}
