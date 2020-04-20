@@ -1,4 +1,4 @@
-# JSF + Hibernate P.O.C
+# Java Web: JSF + Hibernate Integration
 
 This project is intended to be a demonstration of integration of technologies associated with the JSF (Java Server Faces)
 framework.
